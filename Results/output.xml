@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.11 on win32)" generated="20230630 16:53:29.574" rpa="false" schemaversion="4">
+<suite id="s1" name="BasicSearch" source="C:\Users\glh_m\Documents\Robot\RobotFWTutorial\Tests\eBay\BasicSearch.robot">
+<test id="s1-t1" name="Verify basic search functonality for eBay" line="9">
+<kw name="Start TestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.ebay.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230630 16:53:29.826" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<msg timestamp="20230630 16:53:29.835" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230630 16:53:29.825" endtime="20230630 16:53:32.626"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230630 16:53:32.627" endtime="20230630 16:53:32.743"/>
+</kw>
+<status status="PASS" starttime="20230630 16:53:29.825" endtime="20230630 16:53:32.743"/>
+</kw>
+<kw name="Verify Search Results">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="gh-ac"]</arg>
+<arg>mobile</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230630 16:53:32.744" level="INFO">Typing text 'mobile' into text field 'xpath://*[@id="gh-ac"]'.</msg>
+<status status="PASS" starttime="20230630 16:53:32.744" endtime="20230630 16:53:32.971"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>xpath://*[@id="gh-btn"]</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230630 16:53:32.972" level="INFO">Sending key(s) ('[Return]',) to xpath://*[@id="gh-btn"] element.</msg>
+<msg timestamp="20230630 16:53:35.396" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20230630 16:53:32.971" endtime="20230630 16:53:35.674"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>results for mobile</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230630 16:53:35.772" level="INFO">Current page contains text 'results for mobile'.</msg>
+<status status="PASS" starttime="20230630 16:53:35.674" endtime="20230630 16:53:35.772"/>
+</kw>
+<status status="PASS" starttime="20230630 16:53:32.743" endtime="20230630 16:53:35.772"/>
+</kw>
+<kw name="Finish TestCase">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230630 16:53:35.773" endtime="20230630 16:53:38.004"/>
+</kw>
+<status status="PASS" starttime="20230630 16:53:35.773" endtime="20230630 16:53:38.005"/>
+</kw>
+<doc>This test case verifies the search</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20230630 16:53:29.824" endtime="20230630 16:53:38.005"/>
+</test>
+<doc>Basic Search Functionality</doc>
+<status status="PASS" starttime="20230630 16:53:29.575" endtime="20230630 16:53:38.006"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
