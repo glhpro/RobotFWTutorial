@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation  Basic Search Functionality
-Library  SeleniumLibrary
+Resource  ../../Resources/tuto.resource
+
 
 *** Variables ***
 
@@ -12,19 +13,8 @@ Verify basic search functonality for eBay
     
     Start TestCase
     Verify Search Results
-    Finish TestCase
+    #Finish TestCase
       
 
 *** Keywords ***
 
-Start TestCase
-    Open Browser  https://www.ebay.com  chrome
-    Maximize Browser Window
-
-Verify Search Results
-    Input Text  xpath://*[@id="gh-ac"]  mobile
-    Press Keys  xpath://*[@id="gh-btn"]  [Return]
-    Page Should Contain  results for mobile
-
-Finish TestCase
-    Close Browser
